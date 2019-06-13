@@ -8,6 +8,8 @@ import ColumnToggler from "./components/ColumnToggler";
 import FilterDataTable from "./components/FilterDataTable";
 import ColResizeDemo from "./components/ColResize";
 import Table from "./components/Table";
+import FileUpload from "./components/FileUpload";
+import Test from "./components/Test";
 
 export default class DataTableColGroupDemo extends Component {
   constructor() {
@@ -21,33 +23,47 @@ export default class DataTableColGroupDemo extends Component {
     return (
       <div>
         <h1> Prime React POC</h1>
-        <a href="http://localhost:3000/datatable">
+
+        <Link to="/datatable">
           <Button label="DataTable" className="p-button-rounded" />
-        </a>
-        <a href="http://localhost:3000/crud">
+        </Link>
+
+        <Link to="/crud">
           <Button
             label="CrudDataTable"
             className="p-button-rounded p-button-success"
           />
-        </a>
-        <a href="http://localhost:3000/messages">
+        </Link>
+
+        <Link to="/messages">
           <Button label="Messages" className="p-button-warning" />
-        </a>
-        <a href="http://localhost:3000/toggler">
+        </Link>
+
+        <Link to="/toggler">
           <Button label="ColumnToggler" className="p-button-danger" />
-        </a>
-        <a href="http://localhost:3000/filter">
+        </Link>
+
+        <Link to="/filter">
           <Button label="FilterDataTable" icon="pi pi-check" />
-        </a>
-        <a href="http://localhost:3000/resize">
+        </Link>
+
+        <Link to="/resize">
           <Button label="ColResize" className="p-button-secondary" />
-        </a>
-        <a href="http://localhost:3000/final">
+        </Link>
+
+        <Link to="/final">
           <Button
             label="FinalTable"
             className="p-button-rounded p-button-danger"
           />
-        </a>
+        </Link>
+
+        <Link to="/fileupload">
+          <Button
+            label="FileUpload"
+            className="p-button-rounded p-button-success"
+          />
+        </Link>
 
         <div>
           <Switch>
@@ -58,7 +74,9 @@ export default class DataTableColGroupDemo extends Component {
             <Route path="/filter" exact component={FilterDataTable} />
             <Route path="/resize" exact component={ColResizeDemo} />
             <Route path="/final" exact component={Table} />
+            <Route path="/fileupload" exact component={FileUpload} />
           </Switch>
+          <Test name={"Demo App"} />
         </div>
       </div>
     );
